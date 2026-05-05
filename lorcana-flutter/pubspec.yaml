@@ -1,0 +1,42 @@
+name: lorcana_collection
+description: Lorcana kaartencollectie tracker met cloud sync
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Supabase – cloud database + auth
+  supabase_flutter: ^2.5.0
+
+  # OCR – kaarten scannen
+  google_mlkit_text_recognition: ^0.12.0
+
+  # Camera + foto kiezen
+  image_picker: ^1.1.2
+
+  # Gecachte kaartafbeeldingen
+  cached_network_image: ^3.3.1
+
+  # Navigatie
+  go_router: ^14.2.0
+
+  # State management
+  provider: ^6.1.2
+
+  # UI
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
