@@ -1,35 +1,29 @@
----
+Lorcana Collection
+iOS app for tracking your Disney Lorcana TCG collection. Built in Swift with SwiftData.
+Features
+Collection — mark cards as owned, foil, or signed. Tracks set completion and total value.
+Scan — scan individual cards or booster packs with your camera via OCR.
+Prices — card prices synced from Cardmarket. Price history per card.
+Wishlist — priority wishlist for cards you're looking for.
+Decks — build decks from owned cards with ink, cost and lore tracking.
+Database — browse all Lorcana cards with filters for set, ink, rarity and type.
+Backup — export collection to CSV or create a full local backup.
+Stack
+Swift / SwiftUI
+SwiftData (local persistence)
+Lorcana API — card data
+Cardmarket — pricing
+Claude Vision API — card recognition via camera
+Requirements
+Xcode 15+
+iOS 17+
+Apple Developer account (for device installation)
+Setup
+Clone the repo
+Open LorcanaCollection.xcodeproj in Xcode
+Add your Claude API key to Xcode's keychain (never hardcode it)
+Select your device and run
+Notes
+Cardmarket scraping may break if their HTML structure changes
+The Claude API key must be stored in Xcode keychain, not in source code
 
-## Faseplan
-
-### Fase 1 - Basis
-- Lorcana API integratie
-- Kaarten bekijken en zoeken
-- UI basisstructuur
-
-### Fase 2 - Collectie
-- SwiftData opslag
-- Normaal/foil toggles
-- Collectieoverzicht
-
-### Fase 3 - Prijzen
-- Cardmarket scraping
-- Sync knop
-- Totaalwaarde berekening
-
-### Fase 4 - Scannen
-- Fotoherkenning via Claude Vision
-- Barcode scanner
-
-### Fase 5 - Video
-- Videoanalyse via Claude Vision
-
----
-
-## Belangrijke notes
-
-- App gaat niet naar App Store; installatie via Xcode (USB) of Apple Developer account
-- Claude heeft geen geheugen tussen sessies; altijd huidige code plakken als context
-- Cardmarket scraping kan breken bij HTML wijzigingen
-- Claude API key opslaan in Xcode keychain, nooit in code
-  
